@@ -1,9 +1,11 @@
 "use strict"
 
-const url = "http://api.openweathermap.org/data/2.5/weather?q=Oklahoma&appid=8f2718bde4ff4634f3ca8f1c0e831789"
+const url = "https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=Oklahoma&appid=8f2718bde4ff4634f3ca8f1c0e831789"
+
 
 $.ajax ({
     url: url,
+     headers: {'X-Requested-With': 'XMLHttpRequest'},
     success:function (result){
         console.log(result);
         console.log(result.name);
